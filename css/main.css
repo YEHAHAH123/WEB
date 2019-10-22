@@ -1,0 +1,121 @@
+ 
+/* é€šç”¨æ ·å¼ */
+html,body,div,p,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,select,button,textarea,iframe,table,th,td{margin:0px;padding:0px;}
+body{font:12px/24px "å¾®è½¯é›…é»‘";text-align:center;  }
+body,a{color:#555; }
+.wrapIE8{text-align:left;}
+img{border:0 none;}
+a{text-decoration:none;}
+ul,ol{list-style:none;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p,a{padding:0; margin:0;}
+.w1200{width:1200px;margin:0 auto; zoom:1;}
+.pc_overflow{overflow:hidden;zoom:1;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:".";}
+*:focus{outline: none;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+table {border-collapse: collapse;border-spacing: 0;cellspacing: 0;cellpadding: 0;}
+input{padding:0px;vertical-align: middle;line-height: normal;border:none;}
+.clear{ clear:both;}
+a:hover{text-decoration:none;}
+body{
+	font-family:'微软雅黑';
+	
+	color:#555
+}
+.text_p{
+	text-indent: 2em;
+	text-align: left;
+	padding: 5px 0;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+ 
+.flex1{
+	display: -webkit-flex; /* Safari */
+    display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items:center;
+	align-content: flex-start
+}
+ 
+
+.left80{
+	margin-left:80px;
+	font-size:90px;
+	color:#fff;
+	text-align:left;
+	font-weight:bold;
+	font-family:'粗体'
+}
+ 
+.pd80{
+	padding:0 80px;
+}
+.item2{ 
+	width:50%;
+}
+ 
+.rgTxt{ text-align:left}
+.rgTxt h2{ font-size:30px; font-weight:bold; padding-bottom:30px; color:#000}
+.rgTxt p{ font-size:14px; color:#999; font-weight:normal; line-height:26px}
+.dl_til{
+	padding:20px 50px;
+	width:90%;
+	margin:0 auto 40px auto;
+}
+.dl_til dd{
+	font-size:30px;
+	color:red;
+	padding-bottom:20px;
+	
+}
+.dl_til dt{
+	font-size:20px;
+	color:#999;
+	font-weight:500;  
+	text-align:left;
+}
+.dl_til dt .img{
+	text-align:center;
+	margin-top:40px;
+	
+}
+.dl_til dt .img img{
+	max-width:100%
+}
+.top_wrap{ 
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	background:#fff;
+	line-height:80px;
+	z-index:99;
+	font-size:30px;
+}
+#cur_time{
+	margin-left:50px;
+	text-align:left
+}
+#secs{
+	margin-right:50px;
+}
+.show_alap{
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:9988;
+	background:rgba(0,0,0,0.7);
+	display:none;
+	text-align:center;
+}
+.show_alap img{
+	margin-top:200px;
+}
