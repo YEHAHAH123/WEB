@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">  
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+   <script src="js/jquery-1.10.2.min.js"></script>  
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="js/bootstrap.min.js"></script> 
+	<script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/swiper.min.css">  
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body> 
+	 <div class="top_wrap flex1">
+	    <div id="cur_time"> 
+		</div>
+		<div id="secs"></div>
+		
+	 </div>
+	  <!--banner-->  
+	  <div class="swiper-container" style="padding-top:90px;">
+	    <div class="swiper-wrapper"> 
+		  <div class="swiper-slide banner_slide" > 
+		     <dl class="dl_til">
+				<dd>Sydney’s Town Hall station evacuated due to fire</dd>
+				<dt>Sydney's Town Hall station was evacuated just after rush hour amid reports of a fire alarm being activated.
+Trains were not stopping at the station, but are now back to normal.
+A Transport for NSW Spokesman, said: "The cause of the alarm has been identified as a technical fault with an escalator bearing.
+"The escalator has been taken out of service and is undergoing repair."
+              <div class="img">
+			    <img src="images/a1.jpg">
+			 </div>
+			 Meanwhile, there are delays on the North Shore Line due to urgent repairs at Milson's Point.</dt> 
+			 </dl> 
+			
+		  </div> 
+		  <div class="swiper-slide banner_slide"> 
+		       <dl class="dl_til">
+				<dd>Call for congestion charge in cities to ease clogged roads</dd>
+				<dt> The Morrison government often talks about its "congestion busting" infrastructure investments to free-up Australia's clogged cities.
+But a new report says all this is doing is providing more roads and more public transport and even more congestion.
+The Grattan Institute is calling for a new approach, saying it is time for Australian cities to follow London, Singapore, Stockholm and Milan and introduce "congestion charging”.
+
+                    <div class="img">
+						<img src="images/a2.jpg">
+					 </div>
+               </dt>
+
+			 </dl> 
+			
+		  </div> 
+		  <div class="swiper-slide banner_slide" > 
+		       <dl class="dl_til">
+				<dd>'Trackless' trams could be heading to Western Sydney for new airport link</dd>
+				<dt>
+				  Trackless trams could soon be whizzing along the streets of Western Sydney.<br>
+Liverpool Council wants to use the system to connect their city centre to the new airport at Badgerys Creek.<br>
+If the plan gets the go ahead there will be a dedicated tram corridor running 19 kilometres down Hoxton Park Road and Fifteenth Avenue.
+The journey from Liverpool to Badgery's Creek would take just 30 minutes.
+                  <div class="img">
+					<img src="images/a3.jpg">
+				 </div>
+
+				</dt>
+			 </dl> 
+			
+		  </div> 
+	     
+	    </div>
+	    <!-- Add Pagination -->
+	    <!--<div class="swiper-pagination"></div>-->
+		<div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+	  </div> 
+     <!--banner end-->
+     <div class="show_alap">
+	    <img src="images/ee.png" />
+	 </div>	  
+	 
+	 
+   <!-- Swiper JS -->
+	  <script src="js/swiper.min.js"></script> 
+	  <!-- Initialize Swiper -->
+	  <script>
+ 
+		window.onload = function() {  
+		var show = document.getElementById("cur_time");  
+		setInterval(function() {   
+			var time = new Date();   // 程序计时的月从0开始取值后+1   
+			var m = time.getMonth() + 1;   
+			var t = time.getFullYear() + "-" + m + "-"     
+			+ time.getDate() + " " + time.getHours() + ":"     
+			+ time.getMinutes() + ":" + time.getSeconds();   
+			show.innerHTML = t;  
+			}, 1000); 
+		};
+		
+		var secsShow=document.getElementById("secs"); 
+		var secs = 30; 
+		setInterval(function() {   
+			if(secs > 0){ 
+			    secs--   
+				secsShow.innerHTML = secs+'s';
+				if(secs == 0){ 
+				  $('.show_alap').hide() 
+				  secs = 31
+				}
+			} 
+		}, 1000);
+		
+		var secs1 = 30; 
+		setInterval(function() {   
+			if(secs1 > 0){ 
+			    secs1--   
+				if(secs1 == 0){ 
+				$('.show_alap').show() 
+				 setInterval(function() { 
+				   secs1 = 31
+				},30000)
+			  } 
+			} 
+		}, 1000);
+		
+		
+		  
+
+	    var swiper = new Swiper('.swiper-container', {
+		    speed:1000,
+	    	 autoplay: {
+			 
+		        delay: 6000,
+		        disableOnInteraction: false,
+		      },
+	      pagination: {
+	        el: '.swiper-pagination',
+	      },
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+	    }); 
+	  </script> 
+</body>
+</html>
